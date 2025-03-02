@@ -26,3 +26,21 @@ metricCardsArray.forEach(card => {
     card.style.backgroundColor = `green`; // Changing background color for each metric card to green
 })
 
+// Task 3 Dynamic Inventory Management – Adding and Removing Ite
+
+const inventoryList = document.getElementById("inventoryList"); // Selecting inventory list
+
+function addInventoryItem(productName) {
+    const newItem = document.createElement("li"); // Creating a new list item
+ 
+
+newItem.setAttribute("class", "product-item"); // Adding class attribute to new item
+newItem.innerHTML = `${productName} <span>(Click to Remove Item)</span>`; // Creating Inner HTML for new product
+
+inventoryList.appendChild(newItem); // Appending new item to Inventory List
+
+newItem.addEventListener("click", function () {
+    inventoryList.removeChild(newItem);
+}); // Adding an event listener to remove new items when it is clicked
+
+}

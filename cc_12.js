@@ -35,7 +35,7 @@ function addInventoryItem(productName) {
  
 
 newItem.setAttribute("class", "product-item"); // Adding class attribute to new item
-newItem.innerHTML = `${productName} <span>(Click to Remove Item)</span>`; // Creating Inner HTML for new product
+newItem.innerHTML = `${productName}` ; // Creating Inner HTML for new product
 
 inventoryList.appendChild(newItem); // Appending new item to Inventory List
 
@@ -44,3 +44,21 @@ newItem.addEventListener("click", function () {
 }); // Adding an event listener to remove new items when it is clicked
 
 }
+
+// Task 4 Business Customer Section – Handling Event Bubbling
+
+const CustomerSection = document.getElementById("customerSection"); // Selecting the customer section
+
+CustomerSection.addEventListener("click", (event) => {
+    console.log("Customer card Has been clicked")
+});
+
+const customerCards = document.querySelectorAll(".customer-card");
+customerCards.forEach((card) => {
+    card.style.backgroundColor = "blue";
+    card.addEventListener("click", (event) => {
+        console.log("Customer card Has been clicked");
+        event.stopPropagation();
+    });
+})
+

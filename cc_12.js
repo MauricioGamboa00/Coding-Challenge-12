@@ -22,7 +22,7 @@ const metricCards = document.querySelectorAll(".metric-card"); // Selecting all 
 const metricCardsArray = [...metricCards]; // Converting Nodelist to an array
 
 metricCardsArray.forEach(card => {
-    card.innerText += " - Updated"; //
+    card.innerText += " - Updated"; // added Updated text to metric cards
     card.style.backgroundColor = `green`; // Changing background color for each metric card to green
 })
 
@@ -39,7 +39,7 @@ newItem.innerHTML = `${productName}` ; // Creating Inner HTML for new product
 
 inventoryList.appendChild(newItem); // Appending new item to Inventory List
 
-newItem.addEventListener("click", function () {
+newItem.addEventListener("click", (event) => {
     inventoryList.removeChild(newItem);
 }); // Adding an event listener to remove new items when it is clicked
 

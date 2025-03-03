@@ -57,7 +57,7 @@ const customerCards = document.querySelectorAll(".customer-card"); // Used query
 customerCards.forEach((card) => {
     card.style.backgroundColor = "blue"; // Changed background color to blue
     card.addEventListener("click", (event) => {
-        console.log("Customer card Has been clicked"); // Added Event Listener to customer section
+        console.log("Customer card Has been clicked"); // Added Event Listener to customer cards
         event.stopPropagation(); // Used stop propagation to prevent console logging from both customer section and customer cards
     });
 })

@@ -51,14 +51,14 @@ const CustomerSection = document.getElementById("customerSection"); // Selecting
 
 CustomerSection.addEventListener("click", (event) => {
     console.log("Customer card Has been clicked")
-});
+}); // Added Event Listener to customer section
 
-const customerCards = document.querySelectorAll(".customer-card");
+const customerCards = document.querySelectorAll(".customer-card"); // Used query selector to select customer cards
 customerCards.forEach((card) => {
-    card.style.backgroundColor = "blue";
+    card.style.backgroundColor = "blue"; // Changed background color to blue
     card.addEventListener("click", (event) => {
-        console.log("Customer card Has been clicked");
-        event.stopPropagation();
+        console.log("Customer card Has been clicked"); // Added Event Listener to customer section
+        event.stopPropagation(); // Used stop propagation to prevent console logging from both customer section and customer cards
     });
 })
 
